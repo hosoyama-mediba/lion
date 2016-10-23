@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <link rel="shortcut icon" href="/favicon.png">
+    <title>Welcome to Firebase Hosting</title>
+    <style media="screen">
+      body {
+        font-family: Roboto, Arial, sans-serif;
+        background: #ECEFF1;
+        color: rgba(0,0,0,0.87);
+      }
+
+      a {
+        color: rgb(3,155,229);
+      }
+
+      .message {
+        max-width: 400px;
+        margin: 40px auto;
+        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.2),0 1px 1px 0 rgba(0,0,0,0.14),0 2px 1px -1px rgba(0,0,0,0.12);
+        border-radius: 2px;
+        background: white;
+        padding: 16px 24px;
+        word-wrap: break-word;
+      }
+
+      .message h1 {
+        font-size: 22px;
+        font-weight: 500;
+        text-align: center;
+        margin: 0 0 16px;
+      }
+
+      .message p {
+        font-weight: 300;
+        line-height: 150%;
+      }
+
+      .message ul {
+        list-style: none;
+        margin: 16px 0 0;
+        padding: 0;
+        text-align: center;
+      }
+
+      .message li a,  .message li button {
+        display: inline-block;
+        margin: 10px;
+        padding: 8px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: 500;
+        background: rgb(3,155,229);
+        color: white;
+        border: 1px solid rgb(3,155,229);
+        border-radius: 3px;
+        font-size: 14px;
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+      }
+      .message li button.subscribed {
+        background: rgb(200,50,3);
+        border: 1px solid rgb(200,50,3);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="message">
+      <h1>Welcome to Firebase Hosting</h1>
+      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
+      <ul id="buttons">
+        <li><a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a></li>
+        <li><button disabled>subscribe</button></li>
+      </ul>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/3.5.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBKJ1C2_GGLEFxBpqccXGccSv7F28TAtI4",
+        authDomain: "lion-44fae.firebaseapp.com",
+        databaseURL: "https://lion-44fae.firebaseio.com",
+        storageBucket: "lion-44fae.appspot.com",
+        messagingSenderId: "891902955947"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script async src="/main.js"></script>
+  </body>
+</html>
