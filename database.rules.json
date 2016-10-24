@@ -1,6 +1,13 @@
 {
   "rules": {
-    ".read": "true",
-    ".write": "true"
+    ".read": "auth != null",
+    ".write": "auth != null",
+    "public_key": {
+      ".read": "true"
+    },
+    "subscription": {
+      ".read": "true",
+      ".write": "true"
+    }
   }
 }

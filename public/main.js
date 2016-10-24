@@ -55,7 +55,7 @@ function initPush(pushSubscription) {
 }
 
 function subscribe() {
-    firebaseDatabase.ref('/push/key/public').once('value').then(function(snapshot) {
+    firebaseDatabase.ref('/public_key/').once('value').then(function(snapshot) {
         var serverPublicKey = snapshot.val();
         console.log('serverPublicKey', serverPublicKey);
         reg.pushManager.subscribe({
@@ -82,17 +82,18 @@ function unsubscribe() {
 }
 
 function save(subscription) {
-    var db = firebaseDatabase.ref('/push/endpoint/' + replaceEndpoint(subscription.endpoint));
+    var db = firebaseDatabase.ref('/subscription/' + replaceEndpoint(subscription.endpoint));
     db.set(subscription);
     console.log('save', db);
 }
 
 function remove(endpoint) {
-    var db = firebaseDatabase.ref('/push/endpoint/' + replaceEndpoint(sub.endpoint));
+    var db = firebaseDatabase.ref('/subscription/' + replaceEndpoint(sub.endpoint));
     db.remove();
     console.log('remove', db);
 }
 
 function replaceEndpoint(endpoint) {
-    return endpoint.split(':')[2];
+    var tmp = endpoint.split('/');
+    return tmp[tmp.length - 1];
 }
